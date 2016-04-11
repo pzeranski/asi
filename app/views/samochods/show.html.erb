@@ -1,0 +1,12 @@
+<p>
+  <strong>Marka:</strong>
+  <%= @samochod.marka %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @samochod.model %>
+</p>
+
+<%= link_to 'Edytuj', edit_samochod_path(@samochod), class: "btn btn-default" %> |
+<%= link_to 'Poprzedni', samochods_path, class: "btn btn-default" %>

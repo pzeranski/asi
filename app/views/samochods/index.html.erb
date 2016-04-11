@@ -1,0 +1,25 @@
+<h1>Lista Samochodów</h1>
+<table class="table table-bordered table-striped text-center table-background opacity">
+  <thead>
+    <tr>
+      <th class="text-center">Marka</th>
+      <th class="text-center">Model</th>
+      <th class="text-center">Akcje</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @samochods.each do |samochod| %>
+      <tr>
+        <td><%= samochod.marka %></td>
+        <td><%= samochod.model %></td>
+        <td><%= link_to 'Pokaż', samochod, class: "btn btn-default" %>
+        <%= link_to 'Edytuj', edit_samochod_path(samochod), class: "btn btn-default" %>
+        <%= link_to 'Usuń', samochod, method: :delete, data: { confirm: 'Czy jesteś pewien?' }, class: "btn btn-default" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table><center>
+<%= will_paginate @posts %></center>
+<br>
+
